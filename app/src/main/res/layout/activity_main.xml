@@ -5,23 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity"
-    android:layout_margin="5dp">
+    android:background="@drawable/bg1">
 
    <TextView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/tv_kampusid"
+       android:layout_marginTop="24dp"
        android:text="Kampus Indonesia"
        android:gravity="center"
-       android:textSize="24sp"
+       android:textColor="@color/white"
+       android:textSize="32sp"
        android:textStyle="bold"
       android:fontFamily="casual"/>
    <androidx.recyclerview.widget.RecyclerView
+       android:layout_marginTop="68dp"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/rv_kampus"
        tools:listitem="@layout/list_item_kampus"
-
        tools:itemCount="3"/>
    <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:layout_width="wrap_content"

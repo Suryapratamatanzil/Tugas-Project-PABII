@@ -35,7 +35,7 @@ public class AdapterKampus extends RecyclerView.Adapter<AdapterKampus.VHKampus> 
     public void onBindViewHolder(@NonNull AdapterKampus.VHKampus holder, int position) {
         ModelKampus MK = listKampus.get(position);
         holder.tvId.setText( MK.getId());
-        holder.tvNama.setText((position+1) + MK.getNama() + " (" + MK.getAkreditasi() + ")" );
+        holder.tvNama.setText((position+1) + ". "+ MK.getNama() + " (" + MK.getAkreditasi() + ")" );
         holder.tvAkreditasi.setText(MK.getAkreditasi());
         holder.tvMotto.setText(MK.getMotto());
         holder.tvAlamat.setText(MK.getDeskripsi_kampus());
@@ -44,7 +44,7 @@ public class AdapterKampus extends RecyclerView.Adapter<AdapterKampus.VHKampus> 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listKampus.size();
     }
 
     public class VHKampus extends RecyclerView.ViewHolder {

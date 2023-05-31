@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    tools:context=".Activity.TambahActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Kampus"
+        android:textSize="38sp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/bg2"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_nama"
+        android:drawableLeft="@drawable/baseline_school"
+        android:drawablePadding="5dp"
+        android:hint="masukkan nama kampus"
+        android:textSize="24sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_akreditasi"
+        android:drawableStart="@drawable/baseline_format_quote"
+        android:padding="5dp"
+        android:hint="masukkan akreditasi kampus"
+        android:textSize="24sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_motto"
+        android:drawableLeft="@drawable/baseline_format_quote"
+        android:drawablePadding="5dp"
+        android:hint="masukkan motto kampus"
+        android:textSize="24sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_alamat"
+        android:drawableStart="@drawable/baseline_add_location_alt"
+        android:padding="5dp"
+        android:hint="masukkan lokasi kampus"
+        android:textSize="24sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_deskripsi_kampus"
+        android:drawableStart="@drawable/baseline_description"
+        android:padding="5dp"
+        android:hint="masukkan deskripsi kampus"
+        android:textSize="24sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_tambah"
+        android:text="Tambah"
+        android:backgroundTint="@color/black"/>
+
+
+
+</LinearLayout>
