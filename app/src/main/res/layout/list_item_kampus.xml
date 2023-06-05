@@ -29,25 +29,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Akreditasi"
+            android:id="@+id/tv_akreditasi"
+            android:textSize="20sp"
+            android:fontFamily="serif" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Motto kampus"
             android:id="@+id/tv_motto"
             android:textSize="18sp"
             android:fontFamily="serif"
             android:textStyle="italic"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Akreditasi"
-            android:id="@+id/tv_akreditasi"
-            android:textSize="24sp"
-            android:fontFamily="serif"
-            android:textStyle="bold"
-            android:visibility="gone"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Alamat"
         android:id="@+id/tv_alamat"
+        android:visibility="gone"
         android:textSize="12sp"
         android:fontFamily="serif"/>
         <TextView
@@ -55,6 +54,7 @@
             android:layout_height="wrap_content"
             android:text="Deskripsi_kampus"
             android:id="@+id/tv_deskripsi"
+            android:visibility="gone"
             android:textSize="18sp"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
