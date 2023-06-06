@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.if4a.kampusproject.API.APIRequestData;
 import com.if4a.kampusproject.API.RetroServer;
+import com.if4a.kampusproject.Activity.DetailActivity;
 import com.if4a.kampusproject.Activity.MainActivity;
 import com.if4a.kampusproject.Activity.UbahActivity;
 import com.if4a.kampusproject.Model.ModelKampus;
@@ -51,8 +52,26 @@ public class AdapterKampus extends RecyclerView.Adapter<AdapterKampus.VHKampus> 
         holder.tvNama.setText((position+1) + ". "+ MK.getNama());
         holder.tvAkreditasi.setText("Akreditasi : "+MK.getAkreditasi());
         holder.tvMotto.setText("Motto : " +MK.getMotto());
-        holder.tvAlamat.setText(MK.getAlamat());
-        holder.tvDeskripsi.setText(MK.getDeskripsi_kampus());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nama = MK.getNama();
+                String akreditasi = MK.getAkreditasi();
+                String motto = MK.getMotto();
+                String alamat = MK.getAlamat();
+                String deskripsi = MK.getDeskripsi_kampus();
+
+                Intent intent = new Intent(holder.itemView.getContext(), DetailActivity.class);
+                intent.putExtra("varNama", nama);
+                intent.putExtra("varAkreditasi", akreditasi);
+                intent.putExtra("varMotto", motto);
+                intent.putExtra("varAlamat", alamat);
+                intent.putExtra("varDeskripsi", deskripsi);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
+
     }
 
     @Override

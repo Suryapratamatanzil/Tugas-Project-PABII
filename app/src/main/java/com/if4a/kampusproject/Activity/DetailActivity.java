@@ -23,10 +23,17 @@ public class DetailActivity extends AppCompatActivity {
         tvDeskripsi = findViewById(R.id.tv_deskripsi);
 
         Intent intent = getIntent();
-        String nama = intent.getStringExtra("varnama");
+        String nama = intent.getStringExtra("varNama");
+        String akreditasi = intent.getStringExtra("varAkreditasi");
+        String motto = intent.getStringExtra("varMotto");
+        String alamat = intent.getStringExtra("varAlamat");
+        String deskripsi = intent.getStringExtra("varDeskripsi");
 
-        setTitle(nama);
         tvNama.setText(nama);
+        tvAkreditasi.setText(akreditasi);
+        tvMotto.setText(motto);
+        tvAlamat.setText(alamat);
+        tvDeskripsi.setText(deskripsi);
 
 
     }

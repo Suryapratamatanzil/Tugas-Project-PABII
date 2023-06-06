@@ -10,35 +10,64 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Detail University"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Nama kampus"
         android:id="@+id/tv_nama"
-        android:textSize="32sp"
+        android:textSize="24sp"
         android:fontFamily="serif"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accreditation"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Akreditasi"
+        android:id="@+id/tv_akreditasi"
+        android:textSize="18sp"
+        android:fontFamily="serif"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Motto"
+        android:textSize="24sp"
         android:textStyle="bold"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Motto kampus"
         android:id="@+id/tv_motto"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:fontFamily="serif"
         android:textStyle="italic"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Akreditasi"
-        android:id="@+id/tv_akreditasi"
+        android:text="Location"
         android:textSize="24sp"
-        android:fontFamily="serif"
-        android:textStyle="bold"
-        android:visibility="gone"/>
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Alamat"
         android:id="@+id/tv_alamat"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:fontFamily="serif"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="University Description"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
