@@ -21,7 +21,7 @@ import retrofit2.Response;
 public class UbahActivity extends AppCompatActivity {
     private String yId, yNama, yAkreditasi, yMotto, yAlamat, yDeskripsi;
     private EditText etNama, etAkreditasi, etMotto, etAlamat, etDeskripsi;
-    private Button btnubah;
+    private Button btnubah, btnkembali;
     private String nama, akreditasi, motto, alamat, deskripsi;
 
     @Override
@@ -42,6 +42,15 @@ public class UbahActivity extends AppCompatActivity {
         etAlamat = findViewById(R.id.et_alamat);
         etDeskripsi = findViewById(R.id.et_deskripsi_kampus);
         btnubah = findViewById(R.id.btn_ubah);
+        btnkembali = findViewById(R.id.btn_kembali);
+
+        btnkembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UbahActivity.this, MainActivity.class));
+                finish();
+            }
+        });
 
         etNama.setText(yNama);
         etAkreditasi.setText(yAkreditasi);
@@ -73,7 +82,7 @@ public class UbahActivity extends AppCompatActivity {
                 if (deskripsi.trim().equals("")) {
                     etDeskripsi.setError("deskripsi harus diisi");
                 } else {
-
+                    ubahKampus();
                 }
             }
         });

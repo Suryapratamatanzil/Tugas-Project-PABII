@@ -19,32 +19,82 @@
             android:fontFamily="serif"
             android:textStyle="bold"
             android:visibility="gone"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="Nama kampus"
-        android:id="@+id/tv_nama"
-        android:textSize="24sp"
-        android:fontFamily="serif"
-        android:textStyle="bold"/>
-        <TextView
+
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Akreditasi"
-            android:textColor="@color/white"
-            android:id="@+id/tv_akreditasi"
-            android:textSize="20sp"
-            android:fontFamily="serif" />
-        <TextView
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="1."
+                    android:id="@+id/tv_position"
+                    android:textSize="24sp"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Nama kampus"
+                    android:id="@+id/tv_nama"
+                    android:textSize="24sp"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"/>
+            </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Motto kampus"
-            android:textColor="@color/white"
-            android:id="@+id/tv_motto"
-            android:textSize="18sp"
-            android:fontFamily="serif"
-            android:textStyle="italic"/>
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Akreditasi : "
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="serif" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Akreditasi"
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_akreditasi"
+                    android:textSize="20sp"
+                    android:fontFamily="serif" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Motto : "
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Motto kampus"
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_motto"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+
+            </TableRow>
+        </TableLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

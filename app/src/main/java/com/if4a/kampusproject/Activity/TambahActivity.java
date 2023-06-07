@@ -2,6 +2,7 @@ package com.if4a.kampusproject.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,7 @@ import retrofit2.Response;
 
 public class TambahActivity extends AppCompatActivity {
     private EditText etNama, etAkreditasi, etMotto, etAlamat, etDeskripsiKampus;
-    private Button btntambah;
+    private Button btntambah, btn_kembali;
     private String nama, akreditasi, motto, alamat, deskripsiKampus;
 
     @Override
@@ -33,7 +34,15 @@ public class TambahActivity extends AppCompatActivity {
         etAlamat = findViewById(R.id.et_alamat);
         etDeskripsiKampus = findViewById(R.id.et_deskripsi_kampus);
         btntambah = findViewById(R.id.btn_tambah);
+        btn_kembali = findViewById(R.id.btn_kembali);
 
+        btn_kembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TambahActivity.this, MainActivity.class));
+                finish();
+            }
+        });
         btntambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

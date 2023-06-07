@@ -48,14 +48,18 @@ public class AdapterKampus extends RecyclerView.Adapter<AdapterKampus.VHKampus> 
     @Override
     public void onBindViewHolder(@NonNull AdapterKampus.VHKampus holder, int position) {
         ModelKampus MK = listKampus.get(position);
+        holder.tvposition.setText((position+1) + ". ");
         holder.tvId.setText( MK.getId());
-        holder.tvNama.setText((position+1) + ". "+ MK.getNama());
-        holder.tvAkreditasi.setText("Akreditasi : "+MK.getAkreditasi());
-        holder.tvMotto.setText("Motto : " +MK.getMotto());
+        holder.tvNama.setText( MK.getNama());
+        holder.tvAkreditasi.setText(MK.getAkreditasi());
+        holder.tvMotto.setText(MK.getMotto());
+        holder.tvAlamat.setText(MK.getAlamat());
+        holder.tvDeskripsi.setText(MK.getDeskripsi_kampus());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String nama = MK.getNama();
                 String akreditasi = MK.getAkreditasi();
                 String motto = MK.getMotto();
@@ -80,9 +84,10 @@ public class AdapterKampus extends RecyclerView.Adapter<AdapterKampus.VHKampus> 
     }
 
     public class VHKampus extends RecyclerView.ViewHolder {
-        TextView tvId, tvNama, tvAkreditasi, tvMotto, tvAlamat, tvDeskripsi;
+        TextView tvposition, tvId, tvNama, tvAkreditasi, tvMotto, tvAlamat, tvDeskripsi;
         public VHKampus(@NonNull View itemView) {
             super(itemView);
+            tvposition = itemView.findViewById(R.id.tv_position);
             tvId = itemView.findViewById(R.id.tv_id);
             tvNama = itemView.findViewById(R.id.tv_nama);
             tvAkreditasi = itemView.findViewById(R.id.tv_akreditasi);
@@ -107,6 +112,7 @@ public class AdapterKampus extends RecyclerView.Adapter<AdapterKampus.VHKampus> 
                             pindah.putExtra("xAkreditasi", tvAkreditasi.getText().toString());
                             pindah.putExtra("xMotto", tvMotto.getText().toString());
                             pindah.putExtra("xAlamat", tvAlamat.getText().toString());
+                            pindah.putExtra("xDeskripsi", tvDeskripsi.getText().toString());
                             ctx.startActivity(pindah);
                         }
                     });
