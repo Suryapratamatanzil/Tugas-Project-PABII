@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="5dp"
     android:background="@drawable/bgandroid3"
     tools:context=".Activity.UbahActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:orientation="vertical">
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +37,7 @@
         </TableLayout>
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/bg2"/>
         <EditText
@@ -81,7 +84,7 @@
             android:textSize="24sp"/>
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:id="@+id/et_deskripsi_kampus"
             android:background="@drawable/bg_corner"
             android:layout_marginTop="10dp"
@@ -96,4 +99,5 @@
             android:id="@+id/btn_ubah"
             android:text="Ubah"
             android:backgroundTint="@color/black"/>
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
